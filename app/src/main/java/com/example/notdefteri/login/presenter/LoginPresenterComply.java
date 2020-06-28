@@ -33,10 +33,14 @@ public class LoginPresenterComply implements ILoginPresenter {
     @Override
     public void doLogin(String name, String passwd) {
 
-        Boolean isLoginSuccess = true;
+
         final int code = user.checkUserValidity(name,passwd);
-        if (code!=0) isLoginSuccess = false;
-        final Boolean result = isLoginSuccess;
+        if (code!=0) {
+            iLoginView.onLoginResult(false);
+          return;
+        }
+
+
         auth.signInWithEmailAndPassword(name, passwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
