@@ -34,14 +34,17 @@ public class LoginPresenterComply implements ILoginPresenter {
     public void doLogin(String name, String passwd) {
 
 
-        final int code = user.checkUserValidity(name,passwd);
-        if (code!=0) {
+        if(name.isEmpty()){
             iLoginView.onLoginResult(false);
-          return;
+            return;
+        }
+        if (passwd.isEmpty()){
+            iLoginView.onLoginResult(false);
+            return;
         }
 
 
-        auth.signInWithEmailAndPassword(name, passwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        auth.signInWithEmailAndPassword(name.trim(), passwd.trim()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
@@ -63,6 +66,6 @@ public class LoginPresenterComply implements ILoginPresenter {
     }
 
     private void initUser(){
-        user = new UserModel("mvp","mvp");
+        user = new UserModel("","");
     }
 }
