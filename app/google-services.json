@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "112385670965",
+    "firebase_url": "https://notdefteri-b5f82.firebaseio.com",
+    "project_id": "notdefteri-b5f82",
+    "storage_bucket": "notdefteri-b5f82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112385670965:android:f78af7e73f4f616988967c",
+        "android_client_info": {
+          "package_name": "com.example.notdefteri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112385670965-8ocmg16o5ai8pr2jibc41ljcgf25h2f3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGwOHLYQZMRB9sOhOe3eBhwmUi6-8pEZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112385670965-8ocmg16o5ai8pr2jibc41ljcgf25h2f3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
